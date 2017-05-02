@@ -1,13 +1,11 @@
----
-title: Markdown information
----
+#Markdown information
 
 #Mike’s cheat sheet 
 
 
 By Mike Wasson– I’m probably forgetting some things 
 
-#General Markdown
+##General Markdown
 
 
 Use GitHub flavored markdown.
