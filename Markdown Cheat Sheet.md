@@ -1,18 +1,17 @@
 #Markdown information
 
-#Mike’s cheat sheet 
+Contains Mike's cheat sheet and Tycen's notes on Writeage, the plug-in for Microsoft Word.
 
+##Mike’s cheat sheet 
 
 By Mike Wasson– I’m probably forgetting some things 
 
-##General Markdown
-
+###General Markdown
 
 Use GitHub flavored markdown.
 <https://guides.github.com/features/mastering-markdown/>
 
-##Metadata
-
+###Metadata
 
 Put this at the top of each file:
 
@@ -28,7 +27,7 @@ ms.date: \<mm/dd/yyyy\>
 
 \---
 
-##Links
+###Links
 
 Link to **docs in our repo**: Use a relative link to the MD file.
 ```
@@ -53,7 +52,7 @@ For Microsoft sites, strip the locale string (e.g., “en-us”).
 
 -   But test the non-locale version, some
 
-##Notes
+###Notes
 
 We have a special syntax for formatted notes.
 
@@ -80,10 +79,10 @@ In the past I’ve used it to convert big complicated docs like this in 15-30 mi
 
 <https://docs.microsoft.com/en-us/azure/architecture/aws-professional/services>
 
-Once it’s installed you can save as markdown files from word docs. Once it’s spit out there’s clean-up tasks that still need to be done after export:
+Once it’s installed you can save as markdown (.md) files from Word docs. Once it’s spit out, there’s clean-up tasks that still need to be done after export:
  
 
-1. Convert heading formats from the underline formats:
+## 1. Convert heading formats from the underline formats:
 
 >    
 
@@ -105,7 +104,7 @@ Once it’s installed you can save as markdown files from word docs. Once it’s
 
 >   \#\# My Heading 2
 
-2. Images get generated with random guids as filenames and without alt text, so:
+## 2. Images get generated with random guids as filenames and without alt text, so:
 
  
 
@@ -115,12 +114,10 @@ becomes something like :
 
 ![Administer emails settings](admin-instructions/admin-email.png)
 
-3. Code samples formatting needs to be fixed. Copy the code sample from the word
-doc and paste to the markdown code, surrounding it with the special code block
-characters (note these are not just single quotes, but the fancy curly quote
-\`\`\`):
+## 3. Code samples formatting needs to be fixed. 
 
- 
+Copy the code sample from the Word doc and paste to the markdown code, surrounding it with the special code block
+characters (note these are not just single quotes, but the fancy curly quote \`\`\`):
 
 \`\`\`
 
@@ -132,9 +129,7 @@ myFunction(){
 
 \`\`\`
 
-4. Adding the YML metadata to the file.
-
- 
+## 4. Adding the YML metadata to the file.
 
 You can also open markdown files in word, although you’ll lose some of the
 markdown formatting features if you do so.
