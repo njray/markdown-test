@@ -302,7 +302,7 @@ To connect to the Jenkins portal, you need the private key that was used to crea
 
     2.  From the Anaconda window, run:
 ```
-   c:\\temp\\putty.exe -ssh -i C:\\[where you have jora-main]\\jenkins.ppk -L 127.0.0.1:8080:localhost:8080 [YOUR RESOURCE GROUP PREFIX]jenkins\@[YOUR RESOURCE GROUP PREFIX]-release-jenkins.eastus.cloudapp.azure.com
+        c:\temp\putty.exe -ssh -i C:\[where you have jora-main]\jenkins.ppk -L 127.0.0.1:8080:localhost:8080 [YOUR RESOURCE GROUP PREFIX]jenkins@[YOUR RESOURCE GROUP PREFIX]-release-jenkins.eastus.cloudapp.azure.com 
 ```
 4.  When a warning message appears, click **Yes** to accept the credentials. The PuTTY window opens, showing that you have an SSH connection to the VM on Azure that hosts the Jenkins server.
 
