@@ -139,14 +139,14 @@ This step installs an Anaconda window with Miniconda so you can run the Python (
 
 1.  To install Miniconda for Python3.6, go to <https://conda.io/miniconda.html>. When the installation is complete, a command line window opens with the Anaconda prompt (cmd\>). If the window doesn’t open, look for a program named Anaconda Windows and open it.
 
-1.  To create the virtual environment for Python programs, at the cmd\> prompt, run the following command. The name **vjoaraapp3** name is user-dependent—you can change it, but be consistent.
+2.  To create the virtual environment for Python programs, at the cmd\> prompt, run the following command. The name **vjoaraapp3** name is user-dependent—you can change it, but be consistent.
 
 ```
    conda create -n vjoaraapp3 python
 ```
-1.  When prompted to proceed, type **y**, then wait a few minutes for the packages to be installed.
+3.  When prompted to proceed, type **y**, then wait a few minutes for the packages to be installed.
 
-2.  To active the environment, at the cmd\> prompt, run:
+4.  To active the environment, at the cmd\> prompt, run:
 ```
    activate vjoaraapp3
 ```
@@ -167,14 +167,14 @@ This step installs an Anaconda shell with Miniconda so you can run the Python (j
 
    export PATH=/home/\$USER/miniconda3/bin:\$PATH
 ```
-1.  To create the virtual environment for Python programs, run:
+2.  To create the virtual environment for Python programs, run:
 ```
    conda create -n vjoaraapp3 python
 ```
-1.  When prompted to proceed, type **y**, then wait a few minutes for the
+3.  When prompted to proceed, type **y**, then wait a few minutes for the
     packages to be installed.
 
-2.  To active the environment, run:
+4.  To active the environment, run:
 ```
    source activate vjoaraapp3
 ```
