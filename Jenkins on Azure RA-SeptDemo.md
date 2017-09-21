@@ -107,7 +107,7 @@ Communities can answer questions and help you set up a successful deployment. Co
 Solution deployment
 ===================
 
-There are three ways to deploy this reference architecture:
+ There are three ways to deploy this reference architecture:
 
 -   Windows computer that is connected remotely to a Linux virtual machine on Azure or another cloud, where all the Python scripts (joara commands) are run.
 
@@ -137,9 +137,7 @@ Set up computer if using Windows
 
 This step installs an Anaconda window with Miniconda so you can run the Python (joara) commands for setting up Jenkins in an isolated environment.
 
-1.  To install Miniconda for Python3.6, go to <https://conda.io/miniconda.html>.
-
->   When the installation is complete, a command line window opens with the Anaconda prompt (cmd\>). If the window doesn’t open, look for a program named Anaconda Windows and open it.
+1.  To install Miniconda for Python3.6, go to <https://conda.io/miniconda.html>. When the installation is complete, a command line window opens with the Anaconda prompt (cmd\>). If the window doesn’t open, look for a program named Anaconda Windows and open it.
 
 1.  To create the virtual environment for Python programs, at the cmd\> prompt, run the following command. The name **vjoaraapp3** name is user-dependent—you can change it, but be consistent.
 
