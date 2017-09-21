@@ -193,7 +193,7 @@ The following steps clone the GitHub repository for this reference architecture 
 ```
 >   NOTE: In subsequent steps, you will edit the **clusters.ini** file. Make  sure to push this back up to your GitHub repository. Jenkins server looks for this **clusters.ini** file, so it needs to be in sync with your local copy.
 
-1.  Edit the **clusters.ini** file based on information you get from GitHub and Azure as follows.
+3.  Edit the **clusters.ini** file based on information you get from GitHub and Azure as follows.
 
     1.  From GitHub, add the following three values:  
         GIT\_HUB\_ORG\_ID = [Your GitHub Org ID from Settings \> Organizations]  
@@ -212,32 +212,28 @@ The following steps clone the GitHub repository for this reference architecture 
 
     4.  Push the **clusters.ini** file back to your joara-main GitHub repository.
 
-2.  Build and install the joara-main app:
+4.  Build and install the joara-main app:
 ```
     cd joara-main
 
    pip install --editable joara-app-provision
 ```
-1.  Verify that the following joara-main repository appears, containing these folders:
+5.  Verify that the following joara-main repository appears, containing these folders:
 
 -   /Infrastructure: Provisioning of infrastructure ARM templates, configuring
     Jenkins and Docker images
 
 -   /Infrastructure/provisioning: Provisioning of Azure resources
-
 -   /Infrastructure/images\_version: Images version metadata
-
 -   /Infrastructure/images: Docker images
-
 -   /Infrastructure/configure: Jenkins configuration
-
 -   joara-app-provision: Joara CLI
 
-1.  To create the application repository in the user account:
+6.  To create the application repository in the user account:
 ```
    joara gitconfigure --group git --image anodejs --task all –verbose
 ```
-1.  To create a webhook for the repo:
+7.  To create a webhook for the repo:
 ```
    joara gitconfigure --group git --image anodejs --task repohook --verbose
 ```
@@ -249,27 +245,21 @@ This step provisions the resources in Azure used for the pipeline. The **all** p
 1.  From the command shell on your Linux or Windows computer, run the following to configure the Azure resources:
 ```
    joara -d dev bootstrap --group all --verbose
-
    joara -d test bootstrap --group all --verbose
-
    joara -d prod bootstrap --group all --verbose
-
    joara -d jenkins bootstrap --group jenkins --verbose
 ```
-1.  Wait about five minutes for the bootstrap to complete, then run the following pre-configuration command to get the password for connecting to the Jenkins server. If the command is not successful at first, wait a few more minutes, then try again.
+2.  Wait about five minutes for the bootstrap to complete, then run the following pre-configuration command to get the password for connecting to the Jenkins server. If the command is not successful at first, wait a few more minutes, then try again.
 ```
    joara -d jenkins jenkinsconfigure --group pre-jenkins
 ```
-1.  Copy the Jenkins Admin password that is displayed on the screen and save it in a secure location. You will need this later. It looks something like this: **2e877fc805c640f386e0510f7481185**
+3.  Copy the Jenkins Admin password that is displayed on the screen and save it in a secure location. You will need this later. It looks something like this: **2e877fc805c640f386e0510f7481185**
 
-2.  To see the resources that have been created, sign on to [portal.azure.com](http://portal.azure.com), then click **Resource groups**. Note that the following Azure resource groups are created, one for each environment (where \<*your prefix*\> is the value you entered earlier in clusters.ini for RESOURCE\_GROUP\_PREFIX):
+4.  To see the resources that have been created, sign on to [portal.azure.com](http://portal.azure.com), then click **Resource groups**. Note that the following Azure resource groups are created, one for each environment (where \<*your prefix*\> is the value you entered earlier in clusters.ini for RESOURCE\_GROUP\_PREFIX):
 
 -   **\<your prefix\>-jenkins**, the Jenkins server based on the Jenkins build from the Azure Marketplace
-
 -   **\<your prefix\>-dev**, the Dev cluster
-
 -   **\<your prefix\>-test**, the Test cluster
-
 -   **\<your prefix\>-prod**, the Production cluster
 
 The resource groups for the Dev, Test, and Prod clusters are essentially identical. Each includes ACR for storing the Docker images, ACS for running Kubernetes, and a storage account used exclusively for keeping track of the Docker image version running in a cluster.
@@ -295,7 +285,7 @@ To connect to the Jenkins portal, you need the private key that was used to crea
 
 >   [add command to run from linux machine to create tunnel]
 
-1.  **If using a Windows computer** for this setup, do the following:
+2.  **If using a Windows computer** for this setup, do the following:
 
     1.  Create the certificates in **/User/\<username\>/.ssh/id\_rsa**.
 
@@ -307,7 +297,7 @@ To connect to the Jenkins portal, you need the private key that was used to crea
 
 >   For more information, see [How to Use SSH keys with Windows on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows).
 
-1.  Create a secure SSH tunnel to the Jenkins server using one of the following methods:
+3.  Create a secure SSH tunnel to the Jenkins server using one of the following methods:
 
     1.  Open PuTTY. In **PuTTY Configuration**, fill in the host name or IP address of the VM from the Azure portal. Click **Connection** \> **SSH** \> **Auth**. Browse to and select your private key. Click **Open** to connect to the virtual machine.
 
@@ -315,9 +305,9 @@ To connect to the Jenkins portal, you need the private key that was used to crea
 ```
    c:\\temp\\putty.exe -ssh -i C:\\[where you have jora-main]\\jenkins.ppk -L 127.0.0.1:8080:localhost:8080 [YOUR RESOURCE GROUP PREFIX]jenkins\@[YOUR RESOURCE GROUP PREFIX]-release-jenkins.eastus.cloudapp.azure.com
 ```
-1.  When a warning message appears, click **Yes** to accept the credentials. The PuTTY window opens, showing that you have an SSH connection to the VM on Azure that hosts the Jenkins server.
+4.  When a warning message appears, click **Yes** to accept the credentials. The PuTTY window opens, showing that you have an SSH connection to the VM on Azure that hosts the Jenkins server.
 
-2.  **Do not close** the PuTTY window—keep this connection to the Jenkins server open.
+5.  **Do not close** the PuTTY window—keep this connection to the Jenkins server open.
 
 ### 3.2. Connect to Jenkins server and sign in
 
@@ -337,7 +327,7 @@ To complete the Jenkins configuration, next connect to Jenkins server through lo
 ```
    joara -d jenkins jenkinsconfigure --group Jenkins --verbose
 ```
-1.  Wait a few minutes for the script to configure the Jenkins jobs. When a success message appears, the Jenkins server configuration is complete.
+7.  Wait a few minutes for the script to configure the Jenkins jobs. When a success message appears, the Jenkins server configuration is complete.
 
 ### 3.3. Give Jenkins the credentials
 
@@ -352,17 +342,11 @@ Now that the Jenkins server is set up, use the Jenkins web console to create cre
 4.  Do the following:
 
     1.  For **Kind**, choose **Microsoft Azure Service Principal**.
-
     2.  For **Scope**, choose **Global (Jenkins, nodes, child items, etc.)**.
-
     3.  For **Subscription ID**, copy the AZURE\_SUBSCRIPTION\_ID value from **clusters.ini** file.
-
     4.  For **Client ID**, copy the AZURE\_CLIENT\_ID value from **clusters.ini**.
-
     5.  For **Client Secret**, copy the AZURE\_CLIENT\_SECRET value from **clusters.ini**.
-
     6.  For **OAuth 2.0 Token Endpoint**, replace **\<TenantId\>** with the AZURE\_TENANT\_ID value from **clusters.ini**.
-
     7.  For **ID**, enter copy the JENKINS\_AZURE\_CREDENTIALS\_NAME value from **clusters.ini**.
 
 5.  Click **Verify Service Principal**, and when verified, click **OK**. If a validation error occurs, make sure the IDs were entered correctly with no extra characters or spaces.
@@ -372,13 +356,9 @@ Now that the Jenkins server is set up, use the Jenkins web console to create cre
 7.  Do the following:
 
     1.  For **Kind**, choose **Username with password**.
-
     2.  For **Scope**, choose **Global (Jenkins, nodes, child items, etc.)**.
-
     3.  For **Username**, enter your GitHub username.
-
     4.  For **Password**, enter the value of GIT\_HUB\_TOKEN from clusters.ini.
-
     5.  For **ID**, enter the value of JENKINS\_GITHUB\_CREDENTIALS NAME from
         clusters.ini.
 
@@ -411,9 +391,9 @@ To access Kubernetes:
 ```
    scp  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i   \~/.ssh/id\_rsa  joaraacsdev\@jora-acs-mgmt-dev.eastus.cloudapp.azure.com:.kube/config /tmp/
 ```
-1.  Copy the config from Linux to local Windows PC using a file transfer program.
+2.  Copy the config from Linux to local Windows PC using a file transfer program.
 
-2.  In the local Window cmd shell, do the following:
+3.  In the local Window cmd shell, do the following:
 
 >   \>SET KUBECONFIG=c:\\\<path to config file\>
 
