@@ -3,7 +3,6 @@
 
 This reference architecture shows how to use Jenkins to creates an end-to-end continuous integration and development (CI/CD) pipeline from GitHub to Azure. This reference architecture deploys a containerized sample application to a Kubernetes cluster on Azure. Jenkins is configured to automate builds in three stages, Dev, Test, and Prod.
 
-GitHub
 
 ![](JenkinsRA-deployed.png)
 
