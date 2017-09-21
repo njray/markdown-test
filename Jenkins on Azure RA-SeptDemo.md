@@ -1,6 +1,5 @@
----
-title: Jenkins on Azure
----
+# Jenkins on Azure
+
 
 This reference architecture shows how to use Jenkins to creates an end-to-end continuous integration and development (CI/CD) pipeline from GitHub to Azure. This reference architecture deploys a containerized sample application to a Kubernetes cluster on Azure. Jenkins is configured to automate builds in three stages, Dev, Test, and Prod.
 
@@ -145,15 +144,16 @@ This step installs an Anaconda window with Miniconda so you can run the Python (
 
 1.  To create the virtual environment for Python programs, at the cmd\> prompt, run the following command. The name **vjoaraapp3** name is user-dependent—you can change it, but be consistent.
 
->   conda create -n vjoaraapp3 python
-
+```
+   conda create -n vjoaraapp3 python
+```
 1.  When prompted to proceed, type **y**, then wait a few minutes for the packages to be installed.
 
 2.  To active the environment, at the cmd\> prompt, run:
-
->   activate vjoaraapp3
-
->   Do this every time you reactivate the Python environment.
+```
+   activate vjoaraapp3
+```
+   Do this every time you reactivate the Python environment.
 
 Set up computer if using Linux
 ------------------------------
@@ -161,27 +161,27 @@ Set up computer if using Linux
 This step installs an Anaconda shell with Miniconda so you can run the Python (joara) commands for setting up Jenkins in an isolated environment.
 
 1.  To install Miniconda, run the following commands:
+```
+   wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86\_64.sh
 
->   wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86\_64.sh
+   chmod +x Miniconda3-latest-Linux-x86\_64.sh
 
->   chmod +x Miniconda3-latest-Linux-x86\_64.sh
+   ./Miniconda3-latest-Linux-x86\_64.sh
 
->   ./Miniconda3-latest-Linux-x86\_64.sh
-
->   export PATH=/home/\$USER/miniconda3/bin:\$PATH
-
+   export PATH=/home/\$USER/miniconda3/bin:\$PATH
+```
 1.  To create the virtual environment for Python programs, run:
-
->   conda create -n vjoaraapp3 python
-
+```
+   conda create -n vjoaraapp3 python
+```
 1.  When prompted to proceed, type **y**, then wait a few minutes for the
     packages to be installed.
 
 2.  To active the environment, run:
-
->   source activate vjoaraapp3
-
->   Do this every time you reactivate the Python environment.
+```
+   source activate vjoaraapp3
+```
+   Do this every time you reactivate the Python environment.
 
 1. Clone joara-main repo and configure clusters.ini
 ---------------------------------------------------
@@ -191,9 +191,9 @@ The following steps clone the GitHub repository for this reference architecture 
 1.  To create a joara-main repository on your GitHub account, clone joara-main from <https://github.com/Snap-Analytx/joara-main.git> and add it to your GitHub account.
 
 2.  On your local computer, run the following commands. If Linux, run in the conda shell created earlier. If Windows, in the Anaconda window created earlier.
-
->   git clone https://github.com/<yourrepository>/joara-main.git 
-
+```
+   git clone https://github.com/<yourrepository>/joara-main.git 
+```
 >   NOTE: In subsequent steps, you will edit the **clusters.ini** file. Make  sure to push this back up to your GitHub repository. Jenkins server looks for this **clusters.ini** file, so it needs to be in sync with your local copy.
 
 1.  Edit the **clusters.ini** file based on information you get from GitHub and Azure as follows.
@@ -216,11 +216,11 @@ The following steps clone the GitHub repository for this reference architecture 
     4.  Push the **clusters.ini** file back to your joara-main GitHub repository.
 
 2.  Build and install the joara-main app:
-
+```
     cd joara-main
 
->   pip install --editable joara-app-provision
-
+   pip install --editable joara-app-provision
+```
 1.  Verify that the following joara-main repository appears, containing these folders:
 
 -   /Infrastructure: Provisioning of infrastructure ARM templates, configuring
@@ -237,32 +237,32 @@ The following steps clone the GitHub repository for this reference architecture 
 -   joara-app-provision: Joara CLI
 
 1.  To create the application repository in the user account:
-
->   joara gitconfigure --group git --image anodejs --task all –verbose
-
+```
+   joara gitconfigure --group git --image anodejs --task all –verbose
+```
 1.  To create a webhook for the repo:
-
->   joara gitconfigure --group git --image anodejs --task repohook --verbose
-
+```
+   joara gitconfigure --group git --image anodejs --task repohook --verbose
+```
 2. Provision Azure and bootstrap the Jenkins server
 ---------------------------------------------------
 
 This step provisions the resources in Azure used for the pipeline. The **all** parameter creates ACS, ACR, and Storage for the Dev, Test, and Prod clusters. The **jenkins** parameter creates the virtual machine used for the Jenkins server.
 
 1.  From the command shell on your Linux or Windows computer, run the following to configure the Azure resources:
+```
+   joara -d dev bootstrap --group all --verbose
 
->   joara -d dev bootstrap --group all --verbose
+   joara -d test bootstrap --group all --verbose
 
->   joara -d test bootstrap --group all --verbose
+   joara -d prod bootstrap --group all --verbose
 
->   joara -d prod bootstrap --group all --verbose
-
->   joara -d jenkins bootstrap --group jenkins --verbose
-
+   joara -d jenkins bootstrap --group jenkins --verbose
+```
 1.  Wait about five minutes for the bootstrap to complete, then run the following pre-configuration command to get the password for connecting to the Jenkins server. If the command is not successful at first, wait a few more minutes, then try again.
-
->   joara -d jenkins jenkinsconfigure --group pre-jenkins
-
+```
+   joara -d jenkins jenkinsconfigure --group pre-jenkins
+```
 1.  Copy the Jenkins Admin password that is displayed on the screen and save it in a secure location. You will need this later. It looks something like this: **2e877fc805c640f386e0510f7481185**
 
 2.  To see the resources that have been created, sign on to [portal.azure.com](http://portal.azure.com), then click **Resource groups**. Note that the following Azure resource groups are created, one for each environment (where \<*your prefix*\> is the value you entered earlier in clusters.ini for RESOURCE\_GROUP\_PREFIX):
@@ -315,9 +315,9 @@ To connect to the Jenkins portal, you need the private key that was used to crea
     1.  Open PuTTY. In **PuTTY Configuration**, fill in the host name or IP address of the VM from the Azure portal. Click **Connection** \> **SSH** \> **Auth**. Browse to and select your private key. Click **Open** to connect to the virtual machine.
 
     2.  From the Anaconda window, run:
-
->   c:\\temp\\putty.exe -ssh -i C:\\[where you have jora-main]\\jenkins.ppk -L 127.0.0.1:8080:localhost:8080 [YOUR RESOURCE GROUP PREFIX]jenkins\@[YOUR RESOURCE GROUP PREFIX]-release-jenkins.eastus.cloudapp.azure.com
-
+```
+   c:\\temp\\putty.exe -ssh -i C:\\[where you have jora-main]\\jenkins.ppk -L 127.0.0.1:8080:localhost:8080 [YOUR RESOURCE GROUP PREFIX]jenkins\@[YOUR RESOURCE GROUP PREFIX]-release-jenkins.eastus.cloudapp.azure.com
+```
 1.  When a warning message appears, click **Yes** to accept the credentials. The PuTTY window opens, showing that you have an SSH connection to the VM on Azure that hosts the Jenkins server.
 
 2.  **Do not close** the PuTTY window—keep this connection to the Jenkins server open.
@@ -337,9 +337,9 @@ To complete the Jenkins configuration, next connect to Jenkins server through lo
 5.  When the setup is complete, click **Start Using Jenkins**. The Jenkins portal opens
 
 6.  Switch to the Linux conda shell or Windows Anaconda cmd window, and run the following command, which installs the code that configures the Jenkins server and creates the three Jenkins jobs that automate the pipeline:
-
->   joara -d jenkins jenkinsconfigure --group Jenkins --verbose
-
+```
+   joara -d jenkins jenkinsconfigure --group Jenkins --verbose
+```
 1.  Wait a few minutes for the script to configure the Jenkins jobs. When a success message appears, the Jenkins server configuration is complete.
 
 ### 3.3. Give Jenkins the credentials
@@ -411,9 +411,9 @@ To see the clusters, access the Kubernetes portal and log on to the cluster for 
 To access Kubernetes:
 
 1.  Get config file from Kubernetes cluster head node to the local Linux machine. Run the following command on the Linux VM:
-
->   scp  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i   \~/.ssh/id\_rsa  joaraacsdev\@jora-acs-mgmt-dev.eastus.cloudapp.azure.com:.kube/config /tmp/
-
+```
+   scp  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i   \~/.ssh/id\_rsa  joaraacsdev\@jora-acs-mgmt-dev.eastus.cloudapp.azure.com:.kube/config /tmp/
+```
 1.  Copy the config from Linux to local Windows PC using a file transfer program.
 
 2.  In the local Window cmd shell, do the following:
