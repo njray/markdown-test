@@ -3,7 +3,6 @@
 
 This reference architecture shows how to use Jenkins to creates an end-to-end continuous integration and development (CI/CD) pipeline from GitHub to Azure. This reference architecture deploys a containerized sample application to a Kubernetes cluster on Azure. Jenkins is configured to automate builds in three stages, Dev, Test, and Prod.
 
-
 ![](JenkinsRA-deployed.png)
 
 Figure 1. Jenkins architecture.
@@ -107,7 +106,7 @@ Communities can answer questions and help you set up a successful deployment. Co
 Solution deployment
 ===================
 
- There are three ways to deploy this reference architecture:
+There are three ways to deploy this reference architecture:
 
 -   Windows computer that is connected remotely to a Linux virtual machine on Azure or another cloud, where all the Python scripts (joara commands) are run.
 
@@ -220,9 +219,7 @@ The following steps clone the GitHub repository for this reference architecture 
 ```
 5.  Verify that the following joara-main repository appears, containing these folders:
 
--   /Infrastructure: Provisioning of infrastructure ARM templates, configuring
-    Jenkins and Docker images
-
+-   /Infrastructure: Provisioning of infrastructure ARM templates, configuring Jenkins and Docker images
 -   /Infrastructure/provisioning: Provisioning of Azure resources
 -   /Infrastructure/images\_version: Images version metadata
 -   /Infrastructure/images: Docker images
@@ -237,6 +234,7 @@ The following steps clone the GitHub repository for this reference architecture 
 ```
    joara gitconfigure --group git --image anodejs --task repohook --verbose
 ```
+
 2. Provision Azure and bootstrap the Jenkins server
 ---------------------------------------------------
 
@@ -249,6 +247,7 @@ This step provisions the resources in Azure used for the pipeline. The **all** p
    joara -d prod bootstrap --group all --verbose
    joara -d jenkins bootstrap --group jenkins --verbose
 ```
+
 2.  Wait about five minutes for the bootstrap to complete, then run the following pre-configuration command to get the password for connecting to the Jenkins server. If the command is not successful at first, wait a few more minutes, then try again.
 ```
    joara -d jenkins jenkinsconfigure --group pre-jenkins
@@ -293,7 +292,7 @@ To connect to the Jenkins portal, you need the private key that was used to crea
         shown in the following picture: Load the file rsa\_id, and save the file
         as **Jenkins.ppk** in the same folder as joara-main.
 
->   [./media/image4.png](./media/image4.png)
+>   ![](JenkinsRA-puttygen.png)
 
 >   For more information, see [How to Use SSH keys with Windows on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows).
 
@@ -391,17 +390,16 @@ To access Kubernetes:
 ```
    scp  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i   \~/.ssh/id\_rsa  joaraacsdev\@jora-acs-mgmt-dev.eastus.cloudapp.azure.com:.kube/config /tmp/
 ```
-2.  Copy the config from Linux to local Windows PC using a file transfer program.
+1.  Copy the config from Linux to local Windows PC using a file transfer program.
 
-3.  In the local Window cmd shell, do the following:
-
->   \>SET KUBECONFIG=c:\\\<path to config file\>
-
->   \>C:\\temp\\kubectl proxy
-
+2.  In the local Window cmd shell, do the following:
+```
+    SET KUBECONFIG=c:\<path to config file> 
+    C:\temp\kubectl proxy 
+```
 >   You’ll see a message such as *Starting server on 127.0.0.1:8001.*
 
-1.  To access Kubernetes, open a browser and go to
+3.  To access Kubernetes, open a browser and go to
     [http://127.0.0.1:8001/api/v1/proxy/namespaces/kube-system/services/kubernetes-dashboard/\#!/deployment?namespace=default](https://na01.safelinks.protection.outlook.com/?url=http%3A%2F%2F127.0.0.1%3A8001%2Fapi%2Fv1%2Fproxy%2Fnamespaces%2Fkube-system%2Fservices%2Fkubernetes-dashboard%2F%23%2521%2Fdeployment%3Fnamespace%3Ddefault&data=02%7C01%7Cv-nanray%40microsoft.com%7Cab801216520747cc085d08d4fd1a3913%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636411736455319445&sdata=FiHcNP4%2FrRuTM%2BOiA51uC73nfY4seiKsM1F9U4co4s4%3D&reserved=0)
 
-2.  In the Kubernetes portal, click the public IP for the deployment under **Services**.
+4.  In the Kubernetes portal, click the public IP for the deployment under **Services**.
