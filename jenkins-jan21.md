@@ -85,7 +85,7 @@ Use the Jenkins [Windows Azure Storage plugin][storage-plugin], which is install
 
 The solution template for Jenkins on Azure installs several Azure plugins. The Azure DevOps Team builds and maintains the solution template and the following plugins, which work with other Jenkins offerings in Azure Marketplace as well as any Jenkins master set up on premises:
 
--   [Azure AD plugin]configure-azure-ad] allows the Jenkins server to support SSO for users based on Azure AD.
+-   [Azure AD plugin][configure-azure-ad] allows the Jenkins server to support SSO for users based on Azure AD.
 
 -   [Azure VM Agents][configure-agent] plugin uses an Azure Resource Manager (ARM) template to create Jenkins agents in Azure virtual machines.
 
@@ -123,7 +123,7 @@ Take advantage of the [Azure VM Agents][configure-agent] plugin to offload build
 
 Scale the Jenkins server virtual machine up or down by changing the virtual machine size. The [solution template for Jenkins on Azure][azure-market] specifies the DS2 v2 size (with two CPUs, 7 GB) by default. This size handles a small to medium team workload. Change the virtual machine size by choosing a different option when building out the server.
 
-Selecting the correct server size depends on the size of the expected workload. The Jenkins community maintains a [selection guide][selection-guide] to help identify the configuration that best meets your requirements. Azure offers many [sizes for Linux VMs][sizes-linux]to meet any requirements.
+Selecting the correct server size depends on the size of the expected workload. The Jenkins community maintains a [selection guide][selection-guide] to help identify the configuration that best meets your requirements. Azure offers many [sizes for Linux VMs][sizes-linux] to meet any requirements.
 
 For more information about scaling the Jenkins master, refer to the Jenkins community of [best practices][best-practices], which also
 includes details about scaling Jenkins master.
@@ -181,9 +181,7 @@ Azure also provides several functions for [monitoring and diagnostics][monitorin
 Communities can answer questions and help you set up a successful deployment. Consider the following:
 
 -   [Jenkins Community Blog](https://jenkins.io/node/)
-
 -   [Azure Forum](https://azure.microsoft.com/en-us/support/forums/)
-
 -   [Stack Overflow Jenkins](https://stackoverflow.com/tags/jenkins/info)
 
 For more best practices from the Jenkins community, visit [Jenkins best practices][jenkins-best].
@@ -277,6 +275,7 @@ Download and run the disaster recovery scripts from [GitHub][disaster].
 [scale]: https://jenkins.io/doc/book/architecting-for-scale/
 [scale-agent]: /azure/jenkins/jenkins-azure-vm-agents
 [selection-guide]: https://jenkins.io/doc/book/hardware-recommendations/
+[service-principal]: /azure/active-directory/develop/active-directory-application-objects
 [secure-jenkins]: https://jenkins.io/blog/2017/04/20/secure-jenkins-on-azure/
 [security-center]: /azure/security-center/security-center-intro
 [service-principal]: /azure/active-directory/develop/active-directory-application-objects)
