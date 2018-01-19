@@ -236,6 +236,7 @@ The Microsoft Jenkins product group has created disaster recovery scripts that b
 
 Download and run the disaster recovery scripts from [GitHub][disaster].
 
+
 [acs]: https://aka.ms/azjenkinsacs
 [ad]: https://azure.microsoft.com/en-us/services/active-directory/
 [ad-sp]: /azure/active-directory/develop/active-directory-integrating-applications
@@ -278,7 +279,6 @@ Download and run the disaster recovery scripts from [GitHub][disaster].
 [service-principal]: /azure/active-directory/develop/active-directory-application-objects
 [secure-jenkins]: https://jenkins.io/blog/2017/04/20/secure-jenkins-on-azure/
 [security-center]: /azure/security-center/security-center-intro
-[service-principal]: /azure/active-directory/develop/active-directory-application-objects)
 [sizes-linux]: /azure/virtual-machines/linux/sizes?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json
 [solution]: https://azure.microsoft.com/en-us/blog/announcing-the-solution-template-for-jenkins-on-azure/
 [sla]: https://azure.microsoft.com/en-us/support/legal/sla/virtual-machines/v1_6/
