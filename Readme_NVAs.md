@@ -134,7 +134,7 @@ To create, configure, and deploy the function app:
 
     4.  **Repository Type**: Git
 
->   ![](Fig03-azure-portal-deployment options.png "Azure Portal Deployment Options screenshot")
+>   ![](Fig03-azure-portal-deployment-options.png "Azure Portal Deployment Options screenshot")
 
 8.  Click **OK** to finish setting up the function app code.
 
