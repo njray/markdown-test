@@ -11,7 +11,7 @@ All the resources you need for this solution are available in this repository. F
 
 This solution uses two Azure virtual machines to host the NVA firewall in an active-passive configuration as the following figure shows.
 
-![](media/Fig01-nva-architectures.png "Solution architecture")
+![](Fig01-nva-architectures.png "Solution architecture")
 
 **Figure 1. Solution architecture**
 
