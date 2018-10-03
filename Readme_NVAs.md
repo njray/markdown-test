@@ -1,4 +1,5 @@
-# Automated failover for network virtual appliances: Supporting high availability with user-defined route tables on Microsoft Azure
+# Automated failover for network virtual appliances: 
+## Supporting high availability with user-defined route tables on Microsoft Azure
 
 This guide shows you how to implement high availability for network virtual appliance (NVA) firewalls using custom route tables that direct traffic through
 an active-passive NVA configuration. These user-defined routes (UDRs) override Azure's default system routes by directing traffic to the active NVA firewall in an active-passive pair. If the active NVA firewall fails for some reason, whether through a planned or unplanned outage, the route can failover to the secondary NVA firewall.
