@@ -88,7 +88,7 @@ To create, configure, and deploy the function app:
 
 2.  [Create a new function app](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function#create-a-function-app). Do not attempt to create or test the function code at this point—just create the function app.
 
->   ![](Fig02-Function-App-UI.png "Function App screenshot")
+   ![](Fig02-Function-App-UI.png "Function App screenshot")
 
 3.  Navigate to the newly created function app and click the [Platform features](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings#platform-features-tab) tab.
 
@@ -134,7 +134,7 @@ To create, configure, and deploy the function app:
 
     4.  **Repository Type**: Git
 
->   ![](Fig03-azure-portal-deployment-options.png "Azure Portal Deployment Options screenshot")
+    ![](Fig03-azure-portal-deployment-options.png "Azure Portal Deployment Options screenshot")
 
 8.  Click **OK** to finish setting up the function app code.
 
