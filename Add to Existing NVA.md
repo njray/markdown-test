@@ -2,7 +2,7 @@
 
 This architecture uses two Azure virtual machines to host the NVA firewall in an active-passive configuration that supports automated failover but does not require Source Network Address Translation (SNAT).
 
-![](media/Fig01-nva-architectures.png "Solution architecture")
+![](Fig01-nva-architectures.png "Solution architecture")
 
 This solution is designed for Azure customers who cannot configure SNAT for inbound requests on their NVA firewalls. SNAT hides the original source client IP address. If you need to log the original IPs or used them within other layered security components behind your NVAs, this solution offers a basic approach.
 
