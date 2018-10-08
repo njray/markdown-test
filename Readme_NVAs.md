@@ -113,7 +113,7 @@ To create, configure, and deploy the function app:
 | FWMAILFROM     | Email address to use as “From:” address on email alerts                                 |
 | FWMAILTO       | Email address to which email alerts should be sent                                      |
 
-3.  If you set FWMONITOR to *TCPPort*, add the following application setting variables and values:
+5.  If you set FWMONITOR to *TCPPort*, add the following application setting variables and values:
 
 | Variable | Value                                                                                      |
 |----------|--------------------------------------------------------------------------------------------|
