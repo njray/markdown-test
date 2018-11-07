@@ -89,7 +89,7 @@ To see the overall state of the cluster and nodes, go to the **Nodes** section o
 
 ### AKS logs 
 
-AKS automatically logs all stdout/stderr to the logs of the pods in the cluster. Use kubectl to see this information and also node-level events and logs. For details, see the deployment steps.
+AKS automatically logs all stdout/stderr to the logs of the pods in the cluster. Use kubectl to see these and also node-level events and logs. For details, see the deployment steps.
 
 In addition, use [Azure Monitor for containers](monitor-containers) to collect metrics and logs through a containerized version of the Log Analytics agent for Linux, which is stored in your Log Analytics workspace.
 
@@ -99,13 +99,13 @@ Use [Azure Security Center](security-center) to get a central view of the securi
 
 ### Operations
 
-To log on to an AKS cluster using your Azure Active Directory authentication token, configure AKS to use Azure Active Directory for [user authentication](aad-auth). Cluster administrators can also configure Kubernetes role-based access control (RBAC) based on a user’s identity or directory group membership.
+To log on to an AKS cluster using your Azure Active Directory authentication token, configure AKS to use Azure Active Directory for [user authentication](aad-auth). Cluster administrators can also configure Kubernetes role-based access control (RBAC) based on a user's identity or directory group membership.
 
 In addition, use [RBAC](rbac) to control access to the Azure resources that you deploy. RBAC lets you assign authorization roles to members of your DevOps team. A user can be assigned to multiple roles, and you can create custom roles for even more fine-grained [permissions](permissions).
 
 ### HTTPS 
 
-As a security best practice, your app should enforce HTTPS and redirect HTTP requests. Create an HTTPS [ingress controller](ingress-controller) on AKS to add security to the information being passed to and from the application.
+As a security best practice, have your app enforce HTTPS and redirect HTTP requests. Create an HTTPS [ingress controller](ingress-controller) on AKS to add security to the information being passed to and from the application.
 
 ### Authentication
 
@@ -117,7 +117,7 @@ This solution uses a public registry to store the Docker image. The code that th
 
 ### DDoS protection
 
-We recommend enabling [DDoS Protection Standard](ddos), which provides additional DDoS mitigation for resources in a VNet. Although basic DDoS protection is automatically  enabled as part of the Azure platform, DDoS Protection Standard provides mitigation capabilities that are tuned specifically to Azure Virtual Network resources.
+Consider enabling [DDoS Protection Standard](ddos). Although basic DDoS protection is enabled as part of the Azure platform, DDoS Protection Standard provides mitigation capabilities that are tuned specifically to Azure virtual network resources.
 
 ### Logging
 
