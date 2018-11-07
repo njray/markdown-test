@@ -1,9 +1,9 @@
 ---
 title: Real-time Scoring of Python Scikit-Learn and Deep Learning Models on Azure
 description: This reference architecture shows how to deploy Python models as web services on Azure to make real-time predictions.
-author: jiata
+author: njray
 ms.date: 11/06/2018
-ms.author: jiata
+ms.author: njray
 ---
 
 # Real-time Scoring of Python Scikit-Learn and Deep Learning Models on Azure
