@@ -31,15 +31,11 @@ An example app that consumes the results is included with the scenario. (See the
 
 ![](./_images/faq-matches.png)
 
-
-
 **Scenario 2:** This scenario shows how to deploy a Convolutional Neural Network (CNN) model as a web service to provide predictions on images. For this scenario, “Input Data” in the architecture diagram refers to image files. CNNs are proven to be very effective in computer vision for tasks such as image classification and object detection. This scenario is designed for the frameworks TensorFlow, Keras (with the TensorFlow back end), and PyTorch but can be generalized to any scenario that uses deep learning models to  make real-time predictions.
 
 This scenario uses a pre-trained ResNet-152 model trained on ImageNet-1K (1,000 classes) dataset to predict which category (see figure below) an image belongs to. These predictions are made in real time using a REST API endpoint.
 
 ![](./_images/Example-predictions.png)
-
-Figure 2: Example predictions from the model
 
 The application flow for the deep learning model is as follows:
 
@@ -87,7 +83,7 @@ For visibility into AKS performance, use the [Azure Monitor for containers](moni
 
 While deploying your application, monitor the AKS cluster to make sure it is working as expected, all the nodes are operational, and all pods are running. Although you can use [kubectl](kubectl), the Kubernetes command-line client, to retrieve pod status, Kubernetes also includes a web dashboard for basic monitoring of the cluster status and management.
 
-![](images/kubernetes-dashboard.png)
+![](./_images/kubernetes-dashboard.png)
 
 To see the overall state of the cluster and nodes, go to the **Nodes** section of the Kubernetes dashboard. If a node is inactive or has failed, you can display the error logs from that page. Similarly, go to the **Pods** and **Deployments** sections for information about the number of pods and status of your deployment.
 
@@ -129,7 +125,9 @@ Use best practices before storing log data, such as scrubbing user passwords and
 
 ## Deployment
 
-To deploy this reference architecture, follow the steps described in the GitHub repo for either [regular Python models](github-python) or [deep learning models](github-dl).
+To deploy this reference architecture, follow the steps described in the GitHub repo for: 
+  - [Regular Python models](github-python).
+  - [Deep learning models](github-dl).
 
 [aad-auth]: /azure/aks/aad-integration
 [acr]: https://kubernetes.io/docs/reference/access-authn-authz/authentication/
