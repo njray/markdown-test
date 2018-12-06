@@ -74,7 +74,7 @@ The reference implementation of this architecture is available on [GitHub][githu
 [AAD]: /azure/active-directory/fundamentals/active-directory-whatis
 [API]: /azure/api-management/api-management-key-concepts
 [ACR]: /azure/container-registry/container-registry-intro
-[AKD]: /azure/aks/intro-kubernetes
+[AKS]: /azure/aks/intro-kubernetes
 [autoscaler]: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
 [cluster-autoscaler]: /azure/aks/autoscaler
 [monitor]: /azure/monitoring/monitoring-container-insights-overview
