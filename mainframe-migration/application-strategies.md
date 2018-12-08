@@ -13,7 +13,7 @@ Application migration typically involves one or more of the following strategies
 
 -   **Rehost.** You can move existing code, programs, and applications from the mainframe and recompile the code to run in a mainframe emulator hosted in a cloud instance. This approach typically starts with moving an application to a cloud-based emulator, and then migrating the database to a cloud-based database. Some engineering and refactoring are required along with data and file conversions.
 
->   Another options is to rehost using a traditional hosting provider. One of the principal benefits of the cloud is outsourcing infrastructure management. Find a datacenter provider that can host your mainframe workloads for you. This model may buy time, reduce vendor lock-in, and produce interim cost savings.
+    Another options is to rehost using a traditional hosting provider. One of the principal benefits of the cloud is outsourcing infrastructure management. Find a datacenter provider that can host your mainframe workloads for you. This model may buy time, reduce vendor lock-in, and produce interim cost savings.
 
 -   **Retire.** Any applications that are no longer needed should be retired before migration.
 
@@ -51,7 +51,7 @@ Lift-and-shift is the no-code option for migrating existing applications to Azur
 
 TP monitors are available from various vendors and run in virtual machines, an infrastructure-as-a-service (IaaS) option on Azure. The following before-and-after diagrams show a migration of an online application backed by IBM Db2, a relational database management system (DBMS), on an IBM z/OS mainframe. Db2 for z/OS uses virtual storage access method (VSAM) files to store the data and Indexed Sequential Access Method (ISAM) for flat files. This architecture also uses CICS for transaction monitoring.
 
-![Lift-and-shift of a mainframe environment to Azure using emulation software](media/mainframe-vs-azure.png)
+![Lift-and-shift of a mainframe environment to Azure using emulation software](../media/mainframe-vs-azure.png)
 
 On Azure, emulation environments are used to run the TP manager and the batch jobs that use JCL. In the data tier, Db2 is replaced by [Azure SQL Database](/azure/sql-database/sql-database-technical-overview), although Microsoft SQL Server, Db2 LUW, or Oracle Database can also be used. An emulator supports IMS, VSAM, and SEQ. The mainframe’s system management tools are replaced by Azure services, and software from other vendors, that run in VMs.
 
