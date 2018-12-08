@@ -11,7 +11,7 @@ As an alternative platform for running traditional mainframe applications, Azure
 
 This section provides technical guidance for making the switch from a mainframe platform to Azure.
 
-![Mainframe and Azure](media/make-the-switchpng)
+![Mainframe and Azure](../media/make-the-switch.png)
 
 ## MIPS vs. vCPUs
 
@@ -39,11 +39,9 @@ Mainframe systems often offer five 9s availability (99.999 percent) when mainfra
 
 By comparison, Azure offers commitment-based service-level agreements (SLAs), where multiple 9s availability is the default, optimized with local or geo-based replication of services.
 
-Azure provides additional availability by replicating data from multiple storage devices, either locally or in other geographic regions. In the event of an Azure-based failure, compute resources can access the replicated data on either
-the local or regional level.
+Azure provides additional availability by replicating data from multiple storage devices, either locally or in other geographic regions. In the event of an Azure-based failure, compute resources can access the replicated data on either the local or regional level.
 
-When you use Azure platform-as-a-service (PaaS) resources, such as [Azure SQL Database](/azure/sql-database/sql-database-technical-overview)
-and [Azure Cosmos DB](/azure/cosmos-db/introduction), the platform handles failovers automatically. When you use Azure infrastructure as a service IaaS), failover relies on specific system functionality, such as SQL Server AlwaysOn features, failover clustering instances, and availability groups.
+When you use Azure platform-as-a-service (PaaS) resources, such as [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) and [Azure Cosmos DB](/azure/cosmos-db/introduction), the platform handles failovers automatically. When you use Azure infrastructure as a service IaaS), failover relies on specific system functionality, such as SQL Server AlwaysOn features, failover clustering instances, and availability groups.
 
 ## Scalability
 
