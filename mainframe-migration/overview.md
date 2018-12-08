@@ -47,7 +47,7 @@ A typical IBM mainframe architecture includes these common components:
 
 IBM systems use a transaction monitor such as CICS to track and manage all aspects of a business transaction. CICS manages the sharing of resources, the integrity of data, and prioritization of execution. CICS authorizes users, allocates resources, and passes database requests by the application to a database manager such as IBM Db2.
 
-For more precise tuning, CICS is commonly used with IMS/TM (formerly IMS/Data Communications or IMS/DC.) IMS was designed to reduce data redundancy by maintaining a single copy of the data. It complements CICS as a transaction monitor by maintaining state throughout the process and recording business functions in a data store.
+For more precise tuning, CICS is commonly used with IMS/TM (formerly IMS/Data Communications or IMS/DC). IMS was designed to reduce data redundancy by maintaining a single copy of the data. It complements CICS as a transaction monitor by maintaining state throughout the process and recording business functions in a data store.
 
 ## Mainframe operations
 
