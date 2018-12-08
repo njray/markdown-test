@@ -27,7 +27,7 @@ In the late 1950s, mainframes were designed as scale-up servers to run high-volu
 
 Mainframes have a reputation for high reliability and availability and are known for their ability to run huge online transactions and batch jobs. A transaction results from a piece of processing initiated by a single request, typically from a user at a terminal, but could also come from multiple other sources, including webpages, remote workstations, or applications in another information system. A transaction can also be triggered automatically at a predefined time as the following figure shows.
 
-![Components in a typical IBM mainframe architecture](zOS-architectural-layers.png)
+![Components in a typical IBM mainframe architecture](../media/zOS-architectural-layers.png)
 
 A typical IBM mainframe architecture includes these common components:
 
