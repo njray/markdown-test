@@ -152,7 +152,7 @@ In addition, each tier can also provide appropriate disaster recovery services. 
 
 The following figure shows a possible Azure deployment using a primary and a secondary site. In the primary site, the production, preproduction, and testing VMs are deployed with high availability. The secondary site is for backup and disaster recovery.
 
-![A possible Azure deployment using a primary and a secondary site](media/migration-backup-DR.png)
+![A possible Azure deployment using a primary and a secondary site](../media/migration-backup-DR.png)
 
 ## Perform a staged mainframe to Azure
 
