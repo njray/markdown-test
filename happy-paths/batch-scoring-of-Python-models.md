@@ -82,8 +82,8 @@ The reference implementation of this architecture is available on [GitHub][githu
 
 <-- Links -->
 
-[0]: ./images/batch-scoring-python.png
-[1]: ./images/monitor-screenshot.png
+[0]: ../images/batch-scoring-python.png
+[1]: ../images/monitor-screenshot.png
 [acr]: /azure/container-registry/container-registry-intro
 [ai]: /azure/application-insights/app-insights-overview
 [automatic-scaling]: /azure/batch/batch-automatic-scaling
