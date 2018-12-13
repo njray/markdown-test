@@ -9,7 +9,7 @@ ms.date: 12/12/2018
 
 This reference architecture shows how to train a recommendation model using Azure Databricks and deploy it as an API by using Azure Cosmos DB, Azure Machine Learning, and Azure Kubernetes Service. This architecture can be generalized for most recommendation engine scenarios, including recommendations for products, movies, and news. Deploy this solution.
 
-![Architecture of a machine learning model for training movie recommendations][../images/recommender-architecture.png]
+![Architecture of a machine learning model for training movie recommendations][../images/recommenders-architecture.png]
 
 **Scenario**: A media organization wants to provide movie or video recommendations to its users. By providing personalized recommendations, the organization meets several business goals, including increased click-through rates, increased engagement on site, and higher user satisfaction.
 
