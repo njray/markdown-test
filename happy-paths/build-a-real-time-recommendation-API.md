@@ -124,8 +124,6 @@ To deploy this architecture, first create an Azure Databricks environment to pre
 
 7.  Run the ALS Movie Operationalization notebook to create the resources required to create a recommendation API that provides the top-10 movie recommendations for a given user.
 
-
-[architecture]: ./media/movie-recommender-using-DSVMs-ML.png
 [aci]: /azure/container-instances/container-instances-overview
 [aad]: /azure/active-directory-b2c/active-directory-b2c-overview
 [aks]: /azure/aks/intro-kubernetes
