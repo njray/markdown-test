@@ -8,7 +8,7 @@ ms.date: 12/13/18
 
 This reference architecture shows how to conduct distributed training of deep learning models across clusters of GPU-enabled VMs. The scenario is image classification, but the solution can be generalized for other deep learning scenarios such as segmentation and object detection. [Deploy this solution][github].
 
-![Architecture for distributed deep learning](0)
+![Architecture for distributed deep learning][0]
 
 
 **Scenario**: Image classification is a widely applied technique in computer vision applications and is often tackled by training a convolutional neural network (CNN). For particularly large models with large datasets, the training process can take weeks or months on a single GPU. In some situations, the models are so large that it isn’t possible to fit reasonable batch sizes onto the GPU. Using distributed training in these situations helps shorten the training time.
@@ -19,7 +19,7 @@ There are number of ways to train a deep learning model in a distributed fashion
 
 In data parallel distributed training with synchronous updates, the model is replicated across *n* hardware devices, and a mini-batch of training samples is divided into *n* micro-batches (see Figure 2). Each device performs the forward and backward pass for a micro-batch. When it finishes the process, it shares the updates with the other devices. These are then used to calculate the updated weights of the entire mini-batch, and then the weights are synchronized across the models. This scenario is covered in the [GitHub][github] repository.
 
-![Data parallel distributed training](1)
+![Data parallel distributed training][1]
 
 This architecture can also be used for model parallel and asynchronous updates. In model parallel distributed training, the model is divided across *n* hardware devices, with each device holding a part of the model. In the simplest implementation. each device may hold a layer of the network, and information is passed between devices during the forward and backwards pass. Larger neural networks can be trained this way but at the cost of performance, since devices are constantly waiting for each other to complete either the forward or backwards pass. Some advanced techniques try to partially alleviate this issue using synthetic gradients.
 
@@ -74,7 +74,7 @@ Azure provides four [GPU-enabled VM types][gpu] suitable for training deep learn
 
 It is recommended that you scale up your training before scaling out, so it is best to try a single V100 before trying a cluster of K80s. The following figure shows the performance differences for different GPU types based on [benchmarking tests][benchmark] carried out using TensorFlow and Horovod on Batch AI.
 
-![Throughput results for TensorFlow models on GPU clusters](2)
+![Throughput results for TensorFlow models on GPU clusters][2]
 
 *Throughput of 32 GPU clusters across various models, on different GPU types and MPI versions. Models were implemented in TensorFlow 1.9*
 
@@ -134,6 +134,8 @@ The reference implementation of this architecture is available on [GitHub][githu
 
 The output of the this reference deployment is a trained model that is saved to blob. To operationalize this model either for [real-time scoring][real-time-scoring]
 or [batch scoring][batch-scoring].
+
+<-- Links -->
 
 [0]: ../images/distributed_dl_architecture.png
 [1]: ../images/distributed_dl_flow.png
