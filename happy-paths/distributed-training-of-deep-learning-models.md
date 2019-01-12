@@ -135,9 +135,9 @@ The reference implementation of this architecture is available on [GitHub][githu
 The output of the this reference deployment is a trained model that is saved to blob. To operationalize this model either for [real-time scoring][real-time-scoring]
 or [batch scoring][batch-scoring].
 
-[0]: ./images/distributed_dl_architecture.png
-[1]: ./images/distributed_dl_flow.png
-[2]: ./images/distributed_dl_tests.png
+[0]: ../images/distributed_dl_architecture.png
+[1]: ../images/distributed_dl_flow.png
+[2]: ../images/distributed_dl_tests.png
 [acr]: /azure/container-registry/container-registry-intro
 [ai]: /azure/application-insights/app-insights-overview
 [aml-compute]: /azure/machine-learning/service/how-to-set-up-training-targets#amlcompute
