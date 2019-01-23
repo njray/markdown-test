@@ -25,7 +25,14 @@ Other relevant use cases include:
 
 ## Architecture
 
+Original
 ![Architecture of a machine learning model for training movie recommendations][architecture]
+
+Number 2
+![Architecture of a machine learning model for training movie recommendations][architecture2]
+
+Number 3
+![Architecture of a machine learning model for training movie recommendations][architecture3]
 
 The data flows through the solution as follows:
 
@@ -143,6 +150,8 @@ Several application settings are required in the function app to ensure that the
 | TextAPIUri                             | URI to the Text service (for example, `https://eastus.api.cognitive.microsoft.com/`).                                                                                                                            |
 
 [architecture]: ../media/mass-ingestion-newsfeeds-architecture.png
+[architecture2]: ../media/mass-ingestion-newsfeeds-architecture2.png
+[architecture3]: ../media/mass-ingestion-newsfeeds-architecture3.png
 [aai]: /azure/azure-monitor/app/app-insights-overview 
 [aas]: https://azure.microsoft.com/en-us/try/app-service/ 
 [acs]: https://azure.microsoft.com/en-us/services/cognitive-services/directory/
