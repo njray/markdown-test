@@ -127,7 +127,7 @@ Several application settings are required in the function app to ensure that the
 
 | **Key**                                | **Value**                                                                                                                                                                                                             |
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ArticleIngestTrigger\_ConnectionString | Connection string to Azure Cosmos DB. For example: AccountEndpoint=https://dangcosmosdb.documents.azure.com:443/;AccountKey=X6tyyMXo3jbmm8iHFiMFkbkKR5Pev8FjQF0MQM04yiTHCaIa0qxkKdVIlAhRFVm1Doo3WyMTaMe7gK7P9YFSig==; |
+| ArticleIngestTrigger\_ConnectionString | Connection string to Azure Cosmos DB. For example: ` AccountEndpoint=https://dangcosmosdb.documents.azure.com:443/;AccountKey=X6tyyMXo3jbmm8iHFiMFkbkKR5Pev8FjQF0MQM04yiTHCaIa0qxkKdVIlAhRFVm1Doo3WyMTaMe7gK7P9YFSig==;` |
 | CosmosDbName                           | Database name.                                                                                                                                                                                                        |
 | CosmosCollectionName                   | Ingest collection name.                                                                                                                                                                                               |
 | CosmosProcessedCollectionName          | Processed collection name.                                                                                                                                                                                            |
@@ -142,7 +142,7 @@ Several application settings are required in the function app to ensure that the
 | TextAPIKey                             | API key to the Text service                                                                                                                                                                                           |
 | TextAPIUri                             | URI to the Text service (for example, <https://eastus.api.cognitive.microsoft.com/>).                                                                                                                            |
 
-[architecture]: ./media/mass-ingestion-newsfeeds-architecture.png
+[architecture]: ../media/mass-ingestion-newsfeeds-architecture.png
 [aai]: /azure/azure-monitor/app/app-insights-overview 
 [aas]: https://azure.microsoft.com/en-us/try/app-service/ 
 [acs]: https://azure.microsoft.com/en-us/services/cognitive-services/directory/
