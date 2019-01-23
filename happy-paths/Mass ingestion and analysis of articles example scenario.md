@@ -25,13 +25,6 @@ Other relevant use cases include:
 
 ## Architecture
 
-Original
-![Architecture of a machine learning model for training movie recommendations][architecture]
-
-Number 2
-![Architecture of a machine learning model for training movie recommendations][architecture2]
-
-Number 3
 ![Architecture of a machine learning model for training movie recommendations][architecture3]
 
 The data flows through the solution as follows:
