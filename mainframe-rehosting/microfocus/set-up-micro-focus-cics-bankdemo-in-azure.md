@@ -51,11 +51,11 @@ Before getting started, check out these prerequisites:
 
 9.  Double-click the file to start the installation. In the first window, select the installation location and accept the end user license agreement.
 
->   ![](media/01-enterprise-server.png)
+     ![](media/01-enterprise-server.png)
 
->   When Setup is complete, the following message appears:
+     When Setup is complete, the following message appears:
 
->   ![](media/02-enterprise-server.png)
+     ![](media/02-enterprise-server.png)
 
 ### Check for updates
 
