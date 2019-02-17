@@ -174,10 +174,10 @@ Congratulations! You are now running an IBM mainframe environment on Azure.
 
 ## Learn more
 
-[Mainframe migration: myths and facts](/architecture/cloud-adoption/infrastructure/mainframe-migration/myths-and-facts)
-[IBM DB2 pureScale on Azure](/azure/virtual-machines/linux/ibm-db2-purescale-azure)
-[Troubleshooting](/azure/virtual-machines/troubleshooting/)
-[Demystifying mainframe to Azure migration](https://azure.microsoft.com/en-us/resources/demystifying-mainframe-to-azure-migration/)
+-   [Mainframe migration: myths and facts](/architecture/cloud-adoption/infrastructure/mainframe-migration/myths-and-facts)
+-   [IBM DB2 pureScale on Azure](/azure/virtual-machines/linux/ibm-db2-purescale-azure)
+-   [Troubleshooting](/azure/virtual-machines/troubleshooting/)
+-   [Demystifying mainframe to Azure migration](https://azure.microsoft.com/en-us/resources/demystifying-mainframe-to-azure-migration/)
 
 <!-- INTERNAL LINKS -->
 [microfocus-get-started]: /microfocus/get-started.md
