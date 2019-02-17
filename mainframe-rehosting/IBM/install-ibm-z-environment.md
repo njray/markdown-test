@@ -35,13 +35,13 @@ This article shows you how to set up Z Development and Test Environment (zD&T) E
 
 ## Create the base image and connect
 
-1.  In Azure portal, [create a VM](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-portal) with the operating system configuration you want. This article assumes a B4ms VM (with 4 vCPUs and 16 GB of memory) running Ubuntu 16.04.
+1.  In Azure portal, [create a VM](/azure/virtual-machines/linux/quick-create-portal) with the operating system configuration you want. This article assumes a B4ms VM (with 4 vCPUs and 16 GB of memory) running Ubuntu 16.04.
 
 2.  After the VM is created, open inbound ports 22 for SSH, 21 for FTP and 9443 for the web server.
 
 3.  Get the SSH credentials shown on the **Overview** blade of the VM via the **Connect** button. Select the **SSH** tab and copy the SSH logon command to the clipboard.
 
-4.  Log on to a [Bash shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) from your local PC and paste the command. It will be in the form **ssh\<user id\>\@\<IP Address\>**. When prompted for your credentials, enter them to establish a connection to your Home directory.
+4.  Log on to a [Bash shell](/azure/cloud-shell/quickstart) from your local PC and paste the command. It will be in the form **ssh\<user id\>\@\<IP Address\>**. When prompted for your credentials, enter them to establish a connection to your Home directory.
 
 ## Copy the installation file to the server
 
@@ -116,4 +116,12 @@ Keep in mind that when the web server starts, it runs under the zD&T user ID tha
 
 ## Next steps
 
-[Set up an Application Developers Controlled Distribution (ADCD) in IBM zD&T v1](demo)
+[Set up an Application Developers Controlled Distribution (ADCD) in IBM zD&T v1][ibm-demo]
+
+<!-- INTERNAL LINKS -->
+[microfocus-get-started]: /microfocus/get-started.md
+[microfocus-cics]: /microfocus/set-up-micro-focus-cics-bankdemo-in-azure.md
+[microfocus-demo]: /microfocus/demo.md
+[ibm-get-started]: /ibm/get-started.md
+[ibm-install-z]: /ibm/install-ibm-z-environment.md
+[ibm-demo]: /ibm/demo.md
