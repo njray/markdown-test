@@ -75,7 +75,7 @@ Now that you have the package(s), you must upload them to your VM on Azure.
     gunzip \*.gz
 ```
 
-![](/media/01-gunzip.png)
+![](media/01-gunzip.png)
 
 ## Configure the image storage
 
@@ -95,11 +95,11 @@ The next step is to configure zD&T to use the uploaded package(s). The image sto
 
 >   Remember, your web access uses port 9443. Use this to log on to the web server. The user ID for ZD&T is **zdtadmin** and the password is **password**.
 
-![](/media/02-welcome.png)
+>   ![](media/02-welcome.png)
 
 3.  On the **Quick Start** page, under **Configure**, select **Image Storage**.
 
-![](/media/03-quickstart.png)
+>   ![](media/03-quickstart.png)
 
 4.  On the **Configure image storage** page, select **SSH File Transfer Protocol**.
 
@@ -123,7 +123,7 @@ The next step is to configure the zD&T target environment. This emulated hosted 
 
 5.  In the **Target Environment label** box, enter a label such as **MyCICS.**
 
-![](/media/04-add-target.png)
+>   ![](media/04-add-target.png)
 
 ## Configure ADCD and deploy
 
@@ -133,7 +133,7 @@ After completing the previous configuration steps, you must configure zD&T to us
 
 2.  Assuming all the images were uploaded to the correct directories, click the **IMAGE from ADCD** link displayed in the lower right (shown in step 7 in the following screenshot).
 
-![](/media/05-adcd.png)
+>   ![](media/05-adcd.png)
 
 ## Create the image
 
@@ -147,7 +147,7 @@ When the previous configuration step is complete, the **Create an image using AD
 
 4.  Select the **Create Image** button at the lower right.
 
-![](/media/06-adcd.png)
+>   ![](media/06-adcd.png)
 
 5.  In the window that appears, telling you the image was deployed successfully, choose **Deploy images**.
 
@@ -159,7 +159,7 @@ When the previous configuration step is complete, the **Create an image using AD
 
 9.  Make sure the box is selected for **Automatically issue IPL command to z/OS after deploy**.
 
-![](/media/07-properties.png)
+>   ![](media/07-properties.png)
 
 10.  Select **Complete**.
 
@@ -178,3 +178,11 @@ Congratulations! You are now running an IBM mainframe environment on Azure.
 [IBM DB2 pureScale on Azure](/azure/virtual-machines/linux/ibm-db2-purescale-azure)
 [Troubleshooting](/azure/virtual-machines/troubleshooting/)
 [Demystifying mainframe to Azure migration](https://azure.microsoft.com/en-us/resources/demystifying-mainframe-to-azure-migration/)
+
+<!-- INTERNAL LINKS -->
+[microfocus-get-started]: /microfocus/get-started.md
+[microfocus-cics]: /microfocus/set-up-micro-focus-cics-bankdemo-in-azure.md
+[microfocus-demo]: /microfocus/demo.md
+[ibm-get-started]: /ibm/get-started.md
+[ibm-install-z]: /ibm/install-ibm-z-environment.md
+[ibm-demo]: /ibm/demo.md
