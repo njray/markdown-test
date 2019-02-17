@@ -56,9 +56,7 @@ Now that you have the package(s), you must upload them to your VM on Azure.
 
 4.  When logged on, create a directory to upload the IBM packages. Keep in mind Linux is case sensitive. For example, this demo assumes the packages are uploaded to:
 
-```
-   /home/MyUserID/ZDT/adcd/nov2017/volumes
-```
+     /home/MyUserID/ZDT/adcd/nov2017/volumes
 
 5.  Upload the files using an SSH client such as[WinSCP](https://winscp.net/eng/index.php). Since SCP is a part of SSH , it uses port 22, which is what SSH uses. If your local computer is not Windows, you can type the [scp command](http://man7.org/linux/man-pages/man1/scp.1.html) in your SSH session.
 
@@ -86,9 +84,9 @@ The next step is to configure zD&T to use the uploaded package(s). The image sto
     /opt/ibm/zDT/bin/startServer
 ```
 2.  Note the URL output by the command and use this URL to access the web server. It looks similar to:
-```
-   https://(your VM name or IP address):9443/ZDTMC/index.html
-```
+
+     https://(your VM name or IP address):9443/ZDTMC/index.html
+
      Remember, your web access uses port 9443. Use this to log on to the web server. The user ID for ZD&T is **zdtadmin** and the password is **password**.
 
      ![](media/02-welcome.png)
