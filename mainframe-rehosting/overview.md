@@ -18,14 +18,14 @@ Micro Focus Enterprise Server is one of the largest mainframe rehosting platform
 
 To get started, see the following articles:
 
--   [Set up Micro Focus Enterprise Server 4.0 and Enterprise Developer 4.0 on Azure](/icrofocus/get-started)
--   [Run the CICS BankDemo application to learn how to operate and manage the environment](/icrofocus/demo)
+-   [Set up Micro Focus Enterprise Server 4.0 and Enterprise Developer 4.0 on Azure][microfocus-get-started]
+-   [Run the CICS BankDemo application to learn how to operate and manage the environment][microfocus-demo]
 
 ## TmaxSoft OpenFrame on Azure
 
 TmaxSoft OpenFrame is a popular mainframe rehosting solution that makes it easy to lift your existing mainframe assets and shift them to Azure. An OpenFrame environment on Azure is suitable for development, demos, testing, or production workloads.
 
-To get started, download the [Install TmaxSoft OpenFrame on Azure](https://azure.microsoft.com/en-us/resources/install-tmaxsoft-openframe-on-azure/) ebook.
+To get started, download the [Install TmaxSoft OpenFrame on Azure](https://azure.microsoft.com/resources/install-tmaxsoft-openframe-on-azure/) ebook.
 
 ## Set up a dev/test environment using IBM Z Dev/Test 12.0
 
@@ -35,8 +35,8 @@ The emulation environment on Azure can host a variety of Z instances through App
 
 To get started, see the following articles:
 
--   [Set up IBM zD&T 12.0 on Azure](ibm/get-started)
--   [Set up ADCD on zD&T](ibm/demo)
+-   [Set up IBM zD&T 12.0 on Azure][ibm-get-started]
+-   [Set up ADCD on zD&T][ibm-demo]
 
 ## Migrate IBM DB2 pureScale to Azure
 
@@ -75,7 +75,7 @@ Many public sector entities would love to move their mainframe applications to a
 
 Azure Government earned a Provisional Authority to Operate (P-ATO) for FedRAMP High Impact for systems that need this type of environment. 
 
-To get started, download [Microsoft Azure Government cloud for mainframe applications](https://azure.microsoft.com/en-us/resources/microsoft-azure-government-cloud-for-mainframe-applications/en-us/).
+To get started, download [Microsoft Azure Government cloud for mainframe applications](https://azure.microsoft.com/resources/microsoft-azure-government-cloud-for-mainframe-applications/en-us/).
 
 ## Learn more
 
@@ -87,3 +87,9 @@ See also:
 -   [Mainframe migration](/azure/architecture/cloud-adoption/infrastructure/mainframe-migration/overview)
 -   [Troubleshooting](/azure/virtual-machines/troubleshooting/)
 -   [Demystifying mainframe to Azure migration](https://azure.microsoft.com/resources/demystifying-mainframe-to-azure-migration/en-us/)
+
+<!-- INTERNAL LINKS -->
+[microfocus-get-started]: /microfocus/get-started.md
+[microfocus-demo]: /microfocus/demo.md
+[ibm-get-started]: /ibm/get-started.md
+[ibm-demo]: /ibm/demo.md
