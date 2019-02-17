@@ -48,19 +48,14 @@ This article shows you how to set up Z Development and Test Environment (zD&T) E
 The installation file for the web server is **ZDT\_Install\_EE\_V12.0.0.1.tgz**. It is included in the media supplied by IBM. You must upload this file to your Ubuntu VM.
 
 1.  From the command line, enter the following command to make sure everything is up to date in the newly created image:
-
 ```
     sudo apt-get update
 ```
-
 2.  Create the directory to install to:
-
 ```
     mkdir ZDT
 ```
-
 3.  Copy the file from your local machine to the VM:
-
 ```
     scp ZDT_Install_EE_V12.0.0.1.tgz  your_userid@<IP Address /ZDT>   =>
 ```
