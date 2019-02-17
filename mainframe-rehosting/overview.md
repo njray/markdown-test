@@ -18,8 +18,8 @@ Micro Focus Enterprise Server is one of the largest mainframe rehosting platform
 
 To get started, see the following articles:
 
--   [Set up Micro Focus Enterprise Server 4.0 and Enterprise Developer 4.0 on Azure](/microfocus/get-started)
--   [Run the CICS BankDemo application to learn how to operate and manage the environment](/microfocus/demo)
+-   [Set up Micro Focus Enterprise Server 4.0 and Enterprise Developer 4.0 on Azure](/icrofocus/get-started)
+-   [Run the CICS BankDemo application to learn how to operate and manage the environment](/icrofocus/demo)
 
 ## TmaxSoft OpenFrame on Azure
 
@@ -35,8 +35,8 @@ The emulation environment on Azure can host a variety of Z instances through App
 
 To get started, see the following articles:
 
--   [Set up IBM zD&T 12.0 on Azure](/ibm/get-started)
--   [Set up ADCD on zD&T](/ibm/demo)
+-   [Set up IBM zD&T 12.0 on Azure](ibm/get-started)
+-   [Set up ADCD on zD&T](ibm/demo)
 
 ## Migrate IBM DB2 pureScale to Azure
 
