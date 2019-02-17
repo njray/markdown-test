@@ -8,5 +8,13 @@ Micro Focus offers development rehosting and test rehosting solutions that exten
 
 ## Next steps
 
-- [Install Micro Focus Enterprise Server 4.0 and Enterprise Developer 4.0 on Azure](set-up-micro-focus-cics-bankdemo-in-azure)
-- [Set up Micro Focus CICS BankDemo for Micro Focus Enterprise Developer 4.0 in Azure](demo)
+- [Install Micro Focus Enterprise Server 4.0 and Enterprise Developer 4.0 on Azure][microfocus-cics]
+- [Set up Micro Focus CICS BankDemo for Micro Focus Enterprise Developer 4.0 in Azure][microfocus-demo]
+
+<!-- INTERNAL LINKS -->
+[microfocus-get-started]: /microfocus/get-started.md
+[microfocus-cics]: /microfocus/set-up-micro-focus-cics-bankdemo-in-azure.md
+[microfocus-demo]: /microfocus/demo.md
+[ibm-get-started]: /ibm/get-started.md
+[ibm-install-z]: /ibm/install-ibm-z-environment.md
+[ibm-demo]: /ibm/demo.md
