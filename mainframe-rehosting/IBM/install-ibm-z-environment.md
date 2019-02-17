@@ -29,9 +29,9 @@ This article shows you how to set up Z Development and Test Environment (zD&T) E
 
 -   A [licensing server](https://www.ibm.com/support/knowledgecenter/en/SSTQBD_12.0.0/com.ibm.zsys.rdt.tools.user.guide.doc/topics/zdt_ee.html). This is required for access to the environments. The way you create it depends on how you license the software from IBM:
 
--   **Hardware-based licensing server** requires a USB hardware device that contains the Rational Tokens necessary to access all portions of the software. You must obtain this from IBM.
+     -   **Hardware-based licensing server** requires a USB hardware device that contains the Rational Tokens necessary to access all portions of the software. You must obtain this from IBM.
 
--   **Software-based licensing server** requires you to set up a centralized server for the management of the licensing keys. This method is preferred and requires you to set up the keys you receive from IBM in the management server.
+     -   **Software-based licensing server** requires you to set up a centralized server for the management of the licensing keys. This method is preferred and requires you to set up the keys you receive from IBM in the management server.
 
 ## Create the base image and connect
 
