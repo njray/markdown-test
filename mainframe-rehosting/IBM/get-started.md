@@ -16,7 +16,15 @@ An extensive partner ecosystem is available to help you migrate IBM mainframe sy
 
 ## Next steps
 
-[Mainframe migration: myths and facts](/architecture/cloud-adoption/infrastructure/mainframe-migration/myths-and-facts)
-[Install IBM zD&T dev/test environment on Azure](install-ibm-z-environment)
-[Set up an Application Developers Controlled Distribution (ADCD) in IBM zD&T v1](demo)
-[IBM DB2 pureScale on Azure](/azure/virtual-machines/linux/ibm-db2-purescale-azure)
+-   [Mainframe migration: myths and facts](/architecture/cloud-adoption/infrastructure/mainframe-migration/myths-and-facts)
+-   [Install IBM zD&T dev/test environment on Azure][ibm-install-z]
+-   [Set up an Application Developers Controlled Distribution (ADCD) in IBM zD&T v1][ibm-demo]
+-   [IBM DB2 pureScale on Azure](/azure/virtual-machines/linux/ibm-db2-purescale-azure)
+
+<!-- INTERNAL LINKS -->
+[microfocus-get-started]: /microfocus/get-started.md
+[microfocus-cics]: /microfocus/set-up-micro-focus-cics-bankdemo-in-azure.md
+[microfocus-demo]: /microfocus/demo.md
+[ibm-get-started]: /ibm/get-started.md
+[ibm-install-z]: /ibm/install-ibm-z-environment.md
+[ibm-demo]: /ibm/demo.md
