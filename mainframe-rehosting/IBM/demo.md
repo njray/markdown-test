@@ -70,7 +70,6 @@ Now that you have the package(s), you must upload them to your VM on Azure.
 7.  Wait for the files to upload, which may take some time depending on your connection to Azure.
 
 8.  When the uploads are complete, navigate to the volumes directory and decompress all of the **gz** volumes:
-
 ```
     gunzip \*.gz
 ```
@@ -82,24 +81,21 @@ Now that you have the package(s), you must upload them to your VM on Azure.
 The next step is to configure zD&T to use the uploaded package(s). The image storage process within zD&T allows you to mount and use the images. It can use SSH or FTP.
 
 1.  Start the **zDTServer**. To do this, you must be at the root level. Enter the following two commands in order:
-
 ```
     sudo su -
     /opt/ibm/zDT/bin/startServer
 ```
 2.  Note the URL output by the command and use this URL to access the web server. It looks similar to:
-
 ```
    https://(your VM name or IP address):9443/ZDTMC/index.html
 ```
+     Remember, your web access uses port 9443. Use this to log on to the web server. The user ID for ZD&T is **zdtadmin** and the password is **password**.
 
->   Remember, your web access uses port 9443. Use this to log on to the web server. The user ID for ZD&T is **zdtadmin** and the password is **password**.
-
->   ![](media/02-welcome.png)
+     ![](media/02-welcome.png)
 
 3.  On the **Quick Start** page, under **Configure**, select **Image Storage**.
 
->   ![](media/03-quickstart.png)
+     ![](media/03-quickstart.png)
 
 4.  On the **Configure image storage** page, select **SSH File Transfer Protocol**.
 
@@ -123,7 +119,7 @@ The next step is to configure the zD&T target environment. This emulated hosted 
 
 5.  In the **Target Environment label** box, enter a label such as **MyCICS.**
 
->   ![](media/04-add-target.png)
+     ![](media/04-add-target.png)
 
 ## Configure ADCD and deploy
 
@@ -133,7 +129,7 @@ After completing the previous configuration steps, you must configure zD&T to us
 
 2.  Assuming all the images were uploaded to the correct directories, click the **IMAGE from ADCD** link displayed in the lower right (shown in step 7 in the following screenshot).
 
->   ![](media/05-adcd.png)
+     ![](media/05-adcd.png)
 
 ## Create the image
 
@@ -147,7 +143,7 @@ When the previous configuration step is complete, the **Create an image using AD
 
 4.  Select the **Create Image** button at the lower right.
 
->   ![](media/06-adcd.png)
+     ![](media/06-adcd.png)
 
 5.  In the window that appears, telling you the image was deployed successfully, choose **Deploy images**.
 
@@ -159,7 +155,7 @@ When the previous configuration step is complete, the **Create an image using AD
 
 9.  Make sure the box is selected for **Automatically issue IPL command to z/OS after deploy**.
 
->   ![](media/07-properties.png)
+     ![](media/07-properties.png)
 
 10.  Select **Complete**.
 
