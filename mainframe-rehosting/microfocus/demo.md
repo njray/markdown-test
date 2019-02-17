@@ -35,7 +35,7 @@ After you install Enterprise Developer 4.0 on the VM, you must configure the ins
 
 4.  Select **World Wide Web Services**, and check the following:
 
--   Application Development Features:
+     Application Development Features:
     -   .NET Extensibility
     -   ASP.NET
     -   Common HTTP Features: Add all available features
