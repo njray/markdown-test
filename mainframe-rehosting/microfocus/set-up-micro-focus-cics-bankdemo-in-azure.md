@@ -67,11 +67,11 @@ After the installation, be sure to check for any additional updates since a numb
 
 2.  Click **Start** \> **Micro Focus License Manager** \> **License Administration**, and then click the **Install** tab. Choose the type of license format to upload: a license file or a 16-character license code. For example, for a file, in **License file**, browse to the **mflic** file uploaded previously to the VM and select **Install Licenses**.
 
->   ![](media/03-enterprise-server.png)
+     ![](media/03-enterprise-server.png)
 
 3.  Verify that Enterprise Server loads. Try launching the Enterprise Server Administration site from a browser using this URL <http://localhost:86/> . The Enterprise Server Administration Page is displayed as shown.
 
->   ![](media/04-enterprise-admin.png)
+     ![](media/04-enterprise-admin.png)
 
 ## Install Enterprise Developer on the developer machine
 
@@ -87,17 +87,17 @@ After the installation, be sure to check for any additional updates since a numb
 
 4.  Double-click the **edvs2017.exe** file to start the installation. In the first window, select the installation location and accept the end user license agreement. If you want, choose **Install Rumba 9.5** to install this terminal emulator, which you will probably need.
 
->   ![](media/04-enterprise-server.png)
+     ![](media/04-enterprise-server.png)
 
 5.  After setup is complete, the following message appears:
 
->   ![](media/05-enterprise-server.png)
+     ![](media/05-enterprise-server.png)
 
 6.  Start the Micro Focus License Manager just as you did for Enterprise Server. Choose **Start** \> **Micro Focus License Manager** \> **License Administration**, and click the **Install** tab.
 
 7.  Choose the type of license format to upload: a license file or a 16-character license code. For example, for a file, in **License file**, browse to the **mflic** file uploaded previously to the VM and select **Install Licenses**.
 
->   ![](/edia/07-enterprise-server.png)
+     ![](/edia/07-enterprise-server.png)
 
 When Enterprise Developer loads, your deployment of a Micro Focus development and test environment on Azure is complete!
 
