@@ -93,8 +93,8 @@ endpoints][endpoints] with blob storage to grant access from a virtual network o
 
 The reference implementation of this architecture is available on GitHub.
 
-[0]: ./images//training-python-models.png
-[1]: ./images/run-object.png
+[0]: ../images//training-python-models.png
+[1]: ../images/run-object.png
 [acr]: /azure/container-registry/container-registry-intro
 [ai]: /azure/application-insights/app-insights-overview
 [aml]: /azure/machine-learning/service/overview-what-is-azure-ml
